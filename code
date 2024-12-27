@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container dark-background text-center">
+        <div>
+            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png" class="image" id="bulb"/>
+        </div>
+
+        <div>
+            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png" class="image" id="cat"/>
+        </div>
+
+        <div class="d-flex flex-row justify-content-center pt-5">
+            <div class="Switch_board">
+                <h1 id="Switch_status">Switched On</h1>
+                <button id="onswitch" onclick="SwitchOn()">On</button>
+                <button id="offswitch" onclick="SwitchOff()">Off</button>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <script>
+        function SwitchOff(){
+            document.getElementById("bulb").src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png";
+            document.getElementById("cat").src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png" ;
+            document.getElementById("Switch_status").textContent = "Switched Off";
+            document.getElementById("onswitch").style.backgroundColor = "green"
+            document.getElementById("offswitch").style.backgroundColor = "Gray"
+        }
+
+        function SwitchOn(){
+            document.getElementById("bulb").src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png";
+            document.getElementById("cat").src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png";
+            document.getElementById("Switch_status").textContent = "Switched On";
+            document.getElementById("onswitch").style.backgroundColor = "gray"
+            document.getElementById("offswitch").style.backgroundColor = "red"
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+CSS
+              
+  .container{
+    background-color: black;
+    height: 100%;
+}
+
+
+.image{
+    width: 150px;
+}
+
+.Switch_board{
+    background-color: rgb(247, 238, 239);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 300px;
+    height: 150px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    margin-bottom: 35px;
+  
+}
+button{
+    height: 40px;
+    width: 85px;
+    border-radius: 8px;
+    border-style:outset;
+}
